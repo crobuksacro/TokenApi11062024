@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TokenApi11062024</name>
+    </assembly>
+    <members>
+        <member name="M:TokenApi11062024.Controllers.AuthController.Token(TokenApi11062024.Model.Binding.LoginBinding)">
+            <summary>
+            Authenticates a user and generates an access token and a refresh token.
+            </summary>
+            <param name="model">The login binding model containing the user's credentials.</param>
+            <returns>
+            A Task resulting in a <see cref="T:TokenApi11062024.Model.ViewModel.TokenViewModel"/> containing the access and refresh tokens for the user. Returns null if authentication fails.
+            </returns>
+            <remarks>
+            This method attempts to authenticate a user using their username and password. If authentication succeeds, it generates a JWT access token and a refresh token for the user. The refresh token is stored in the user's record along with its expiry time, and both tokens are returned in a TokenViewModel. If authentication fails, the method returns null.
+            </remarks>
+        </member>
+        <member name="T:TokenApi11062024.Migrations.init">
+            <inheritdoc />
+        </member>
+        <member name="M:TokenApi11062024.Migrations.init.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TokenApi11062024.Migrations.init.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TokenApi11062024.Migrations.init.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:TokenApi11062024.Services.Implementations.AccountService.GetToken(TokenApi11062024.Model.Binding.LoginBinding)">
+            <summary>
+            Authenticates a user and generates an access token and a refresh token.
+            </summary>
+            <param name="model">The login binding model containing the user's credentials.</param>
+            <returns>
+            A Task resulting in a <see cref="T:TokenApi11062024.Model.ViewModel.TokenViewModel"/> containing the access and refresh tokens for the user. Returns null if authentication fails.
+            </returns>
+            <remarks>
+            This method attempts to authenticate a user using their username and password. If authentication succeeds, it generates a JWT access token and a refresh token for the user. The refresh token is stored in the user's record along with its expiry time, and both tokens are returned in a TokenViewModel. If authentication fails, the method returns null.
+            </remarks>
+        </member>
+        <member name="M:TokenApi11062024.Services.Implementations.AccountService.GenerateRefreshToken">
+            <summary>
+            Generates a random string to be used as a refresh token.
+            </summary>
+            <returns>
+            A string representing the generated refresh token.
+            </returns>
+            <remarks>
+            This method generates a refresh token by creating a random 64-byte number and converting it to a Base64 string. This token is used to securely refresh authentication tokens when they expire.
+            </remarks>
+        </member>
+    </members>
+</doc>
